@@ -1,5 +1,4 @@
-﻿using MEF.WPF.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MEF.WPF
+namespace MEF.WPF.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerView : UserControl
     {
-        public MainWindow()
+        public CustomerView()
         {
             InitializeComponent();
-
-            MainWindowViewModel viewModel =
-                App.Container.GetExportedValueOrDefault<MainWindowViewModel>();
-            this.DataContext = viewModel;
         }
     }
 }
